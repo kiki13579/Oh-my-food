@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "s",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiki13579/Oh-my-food.git"
+  },
+  "author": "Kamihate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiki13579/Oh-my-food/issues"
+  },
+  "homepage": "https://github.com/kiki13579/Oh-my-food#readme",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
