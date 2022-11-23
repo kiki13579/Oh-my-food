@@ -14,7 +14,7 @@
         flex-grow: 1;
         border-radius: 1rem;
         @include box-shadow.base-shadow;
-        &::hover {
+        &:hover {
             @include zoom.zoom;
         }
     }

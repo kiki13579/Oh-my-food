@@ -74,7 +74,7 @@ header {
   border-radius: 1rem;
   box-shadow: 2px 1px 8px -3px black;
 }
-.tuto li::hover {
+.tuto li:hover {
   transform: scale(1.02);
 }
 .tuto i.fas {
