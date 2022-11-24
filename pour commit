@@ -1,1 +1,1 @@
-git add --all && git commit -m "text"
+git add --all && git commit -m "Maj fonctionnement & Added variables"

@@ -1,11 +1,14 @@
 @use "../utils/box-shadow.scss";
 @use "../utils/zoom.scss";
+@use "../utils/variable.scss";
+
 
 .tuto {
+    counter-reset: steps;
     & ol {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
         flex-direction: column;
     }
     & li {
@@ -13,12 +16,32 @@
         padding: 1rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
+        list-style-type: none;
+        position: relative;
         @include box-shadow.base-shadow;
+        &::before {
+            display: grid;
+            place-items: center;
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: variable.$purple;
+            width: 1.8*variable.$tuto-base-height;
+            height: 1.8*variable.$tuto-base-height;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0.8*variable.$tuto-base-height;
+            left: -1*variable.$tuto-base-height;
+        }
         &:hover {
             @include zoom.zoom;
         }
     }
     & i.fas {
         margin-right: 1rem;
+        color: grey;
+    }
+    & i.fa-store {
+        color: variable.$purple;
     }
 }

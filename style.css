@@ -61,10 +61,13 @@ header {
   font-size: 1.4rem;
 }
 
+.tuto {
+  counter-reset: steps;
+}
 .tuto ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   flex-direction: column;
 }
 .tuto li {
@@ -72,13 +75,33 @@ header {
   padding: 1rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
+  list-style-type: none;
+  position: relative;
   box-shadow: 2px 1px 8px -3px black;
+}
+.tuto li::before {
+  display: grid;
+  place-items: center;
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0.8rem;
+  left: -1rem;
 }
 .tuto li:hover {
   transform: scale(1.02);
 }
 .tuto i.fas {
   margin-right: 1rem;
+  color: grey;
+}
+.tuto i.fa-store {
+  color: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */
